@@ -11,12 +11,6 @@ struct TreeNode{
 	}
 };
 
-TreeNode* search(TreeNode* cur, int val){
-	if(val == cur->val) return cur;
-	if(val > cur->val)
-		return search(cur->right, val);
-	return search(cur->left, val);
-}
 
 TreeNode* insert(TreeNode* cur, int val){
 	if(!cur) return new TreeNode(val);
